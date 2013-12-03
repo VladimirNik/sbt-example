@@ -5,6 +5,8 @@ object Macros {
   def hello_impl(c: Context) = c.universe.reify(println("hello world!"))
   def hello = macro hello_impl
 
+  
+  
   def printf(format: String, params: Any*): Unit = macro printf_impl
   def printf_impl(c: Context)(format: c.Expr[String], params: c.Expr[Any]*): c.Expr[Unit] = {
     import c.universe._
@@ -28,6 +30,9 @@ object Macros {
     c.Expr[Unit](Block(stats.toList, Literal(Constant(()))))
   }
 
+  
+  
+  
   def test1_impl(c: Context) =
     c.universe.reify { 
       val bool = false
@@ -37,6 +42,9 @@ object Macros {
     }
   def test1 = macro test1_impl
 
+  
+  
+  
   def test2_impl(c: Context)(cond: c.Expr[Boolean], msg: c.Expr[Any]) = c.universe.reify {
       trait Test {
         def testing: Int
