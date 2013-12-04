@@ -1,8 +1,9 @@
 import scala.collection
 
 object TestVals {
-    val a0 = new aaa.bbb.ccc.ddd.ClassA()
+    val a0 = aaa.bbb.ccc.ddd.ClassA()
 	val b0 = scala.collection.mutable.Map[aaa.bbb.ccc.ddd.ClassB, aaa.bbb.ccc.ddd.ClassA]()
+	val c0 = new aaa.bbb.ccc.ddd.ClassA() with aaa.bbb.ccc.ddd.TraitC with aaa.bbb.ccc.ddd.TraitD
 }
 
 class TestUsage {
@@ -38,4 +39,9 @@ class TestUsage {
   import scala.collection.mutable
   import scala.collection.immutable.Map
   val b3 = TestVals.b0
+  
+  
+  
+  //compound type
+  val c1 = TestVals.c0 
 }
