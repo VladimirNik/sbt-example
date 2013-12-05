@@ -27,6 +27,7 @@ class TestUsage {
   
   
   
+  //val b0 = scala.collection.mutable.Map[aaa.bbb.ccc.ddd.ClassB, aaa.bbb.ccc.ddd.ClassA]()
   val b1 = TestVals.b0
   
  
@@ -42,6 +43,6 @@ class TestUsage {
   
   
   
-  //compound type
+  //val c0 = new aaa.bbb.ccc.ddd.ClassA() with aaa.bbb.ccc.ddd.TraitC with aaa.bbb.ccc.ddd.TraitD
   val c1 = TestVals.c0 
 }

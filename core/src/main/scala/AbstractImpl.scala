@@ -16,8 +16,9 @@ class AbstractImplTraits {
   import AbstractImplTraits._
   import aaa.bbb.ccc.ddd.{ClassA, ClassB}
   
-//  class T1 extends Trait1 
+  //class T1 extends Trait1
    
-//  class T2 extends Trait2[ClassA]
+  //class T2 extends Trait2[ClassA]
+  
   
 }

@@ -5,7 +5,6 @@ object Macros {
   def hello_impl(c: Context) = c.universe.reify(println("hello world!"))
   def hello = macro hello_impl
 
-//  val c: {def u: Int} = ???
   
   def printf(format: String, params: Any*): Unit = macro printf_impl
   def printf_impl(c: Context)(format: c.Expr[String], params: c.Expr[Any]*): c.Expr[Unit] = {
@@ -37,7 +36,6 @@ object Macros {
     
     c.universe.reify { 
     class BBB
-//      val c: {def u: Int} = ???
       val bool = false
       val x = 5
       if (bool) x else bool
